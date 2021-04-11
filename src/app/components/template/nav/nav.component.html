@@ -49,11 +49,14 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item">
-        <button class="btn text-white my-2 my-sm-0" type="button">Entrar</button>
+        <button (click)="login()" class="btn text-white my-2 my-sm-0" type="button">Entrar</button>
       </li>
       <li class="nav-item ">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="button">Criar conta</button>
+        <button (click)="cadastro()" class="btn btn-outline-light my-2 my-sm-0" type="button">Criar conta</button>
       </li>
     </ul>
   </div>
 </nav>
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>

@@ -1,44 +1,42 @@
-<div class="row mt-5 mb-5">
-  <h1>Título da Página</h1>
-</div>
+<div class="container">
 
-<div class="d-flex flex-column justify-content-around border p-3">
+  <div class="row mt-5 mb-5">
+    <h1>Título da Página</h1>
+  </div>
 
   <div class="row">
-    <div class="col">
-      Nome
-    </div>
-    <div class="col">
-      Categoria
-    </div>
-    <div class="col">
-      Likes
-    </div>
-    <div class="col">
-      Assistidos
-    </div>
-    <div class="col">
-      Ações
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Nome do entreterimento" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
     </div>
   </div>
 
-  <div class="row mt-2">
-    <div class="col">
-      Naruto
-    </div>
-    <div class="col">
-      Anime
-    </div>
-    <div class="col">
-      1083
-    </div>
-    <div class="col">
-      99318
-    </div>
-    <div class="col">
-      <button type="button" class="btn btn-primary btn-sm mr-1">Editar</button>
-      <button type="button" class="btn btn-secondary btn-sm">Excluir</button>
-    </div>
+
+  <div class="d-flex flex-column justify-content-around mt-3">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Categoria</th>
+          <th scope="col">Curtidas</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of items">
+        <tr>
+          <td>{{item.name}}</td>
+          <td>{{item.category}}</td>
+          <td>{{item.likes}}</td>
+          <td>
+            <button type="button" class="btn btn-primary btn-sm mr-2">Editar</button>
+            <button type="button" class="btn btn-secondary btn-sm">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 
 </div>
+
